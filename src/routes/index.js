@@ -1,4 +1,5 @@
 // layout
+import config from '~/config';
 import { HeaderOnly } from '~/components/Layout';
 import Home from '~/pages/Home';
 import Following from '~/pages/Following';
@@ -12,12 +13,8 @@ const publicRoutes = [
     component: Home,
   },
   {
-    path: '/following',
+    path: config.routes.showProduct,
     component: Following,
-  },
-  {
-    path: '/profile',
-    component: Profile,
   },
   {
     path: '/product',
@@ -30,6 +27,11 @@ const publicRoutes = [
     layout: null,
   },
 ];
-const privateRoutes = [];
+const privateRoutes = [
+  {
+    path: '/profile',
+    component: Profile,
+  },
+];
 
 export { publicRoutes, privateRoutes };
