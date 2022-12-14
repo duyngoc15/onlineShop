@@ -1,6 +1,6 @@
 import { Fragment } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { publicRoutes, privateRoutes } from '~/routes';
+import { publicRoutes } from '~/routes';
 import { DefaultLayout } from '~/components/Layout';
 function App() {
   return (
@@ -32,5 +32,4 @@ function App() {
     </Router>
   );
 }
-
 export default App;

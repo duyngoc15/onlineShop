@@ -1,5 +1,5 @@
 import classNames from 'classnames/bind';
-import { faChartSimple, faCirclePlus, faClipboardList, faHandHoldingDollar } from '@fortawesome/free-solid-svg-icons';
+import { faCircleCheck, faCircleDollarToSlot, faClipboardList, faHistory } from '@fortawesome/free-solid-svg-icons';
 
 import styles from './SideBar.module.scss';
 import Menu from './Menu';
@@ -13,15 +13,14 @@ function Sidebar() {
     <aside className={cx('wrapper')}>
       <Menu title="Sản phẩm">
         <MenuItem icon={faClipboardList} title="Danh sách sản phẩm" link={config.routes.showProduct} />
-        <MenuItem icon={faCirclePlus} title="Thêm sản phẩm" link={config.routes.addProduct} />
+        <MenuItem icon={faCircleCheck} title="Sản phẩm cho bạn" link={config.routes.login} />
       </Menu>
 
       <Menu title="Đơn hàng của bạn">
-        <MenuItem icon={faChartSimple} title="Đơn hàng hiện tại" link={config.routes.curorder} />
-        <MenuItem icon={faHandHoldingDollar} title="Lịch sử mua hàng" link={config.routes.history} />
+        <MenuItem icon={faCircleDollarToSlot} title="Đơn hàng hiện tại" link={config.routes.login} />
+        <MenuItem icon={faHistory} title="Lịch sử mua hàng" link={config.routes.login} />
       </Menu>
     </aside>
   );
 }
-
 export default Sidebar;

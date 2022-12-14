@@ -15,12 +15,12 @@ const MENU_ITEMS = [
   {
     icon: <FontAwesomeIcon icon={faCircleUser} />,
     title: 'Tài khoản',
-    link: config.routes.profile,
+    link: config.routes.login,
   },
   {
     icon: <FontAwesomeIcon icon={faRightFromBracket} />,
     title: 'Đăng xuất',
-    link: config.routes.logout,
+    link: config.routes.login,
   },
 ];
 
@@ -29,7 +29,7 @@ function Header() {
     <header className={cx('wrapper')}>
       <div className={cx('inner')}>
         <div className={cx('logo')}>
-          <Link to={config.routes.product}>
+          <Link to={config.routes.home}>
             <img src={mainLogo} alt="" srcset="" />
           </Link>
 
